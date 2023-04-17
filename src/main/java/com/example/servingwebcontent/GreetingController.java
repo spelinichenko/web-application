@@ -29,7 +29,7 @@ public class GreetingController {
         return "main";
     }
 
-    @PostMapping
+    @PostMapping("/")
     public String addUser(@RequestParam String name, @RequestParam String email, Map<String, Object> model) {
         Person person = new Person(name, email);
         personRepository.save(person);
